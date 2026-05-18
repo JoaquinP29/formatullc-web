@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FormaTuLLC · Propuestas de logo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0a1a35;
+    --navy-2: #112a55;
+    --blue-2: #4f46e5;
+    --ink: #0f1a2b;
+    --muted: #5b6776;
+    --line: #e6e9ef;
+  }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--ink);
+    background: #f6f8fc;
+    line-height: 1.6;
+    padding: 40px 20px 80px;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  .top {
+    background: #fff; border-radius: 18px; padding: 36px 40px;
+    box-shadow: 0 6px 24px rgba(11,31,58,.06);
+    margin-bottom: 30px;
+  }
+  .top h1 {
+    font-family: 'Plus Jakarta Sans'; font-size: 30px;
+    color: var(--navy); letter-spacing: -.02em; margin-bottom: 10px;
+  }
+  .top p { color: var(--muted); font-size: 16px; max-width: 720px; }
+
+  .logo-card {
+    background: #fff; border-radius: 20px; padding: 32px;
+    box-shadow: 0 6px 24px rgba(11,31,58,.06);
+    margin-bottom: 24px;
+    display: grid; grid-template-columns: 80px 1fr; gap: 28px;
+    align-items: start;
+  }
+  .badge-num {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: linear-gradient(135deg, #4f46e5, #2563eb);
+    color: #fff; display: grid; place-items: center;
+    font-family: 'Plus Jakarta Sans'; font-weight: 800; font-size: 26px;
+    box-shadow: 0 8px 18px rgba(79,70,229,.30);
+  }
+  .logo-card h2 {
+    font-family: 'Plus Jakarta Sans'; font-size: 22px; color: var(--navy);
+    letter-spacing: -.015em; margin-bottom: 4px;
+  }
+  .logo-card .sub { color: var(--muted); font-size: 14.5px; margin-bottom: 24px; }
+
+  .showcase {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin-top: 8px;
+  }
+  .demo {
+    border-radius: 14px; padding: 24px; display: flex;
+    flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; min-height: 140px;
+    transition: transform .2s ease;
+  }
+  .demo:hover { transform: translateY(-3px); }
+  .demo.light { background: #f5f7fb; border: 1px solid #ebeef4; }
+  .demo.dark { background: var(--navy); }
+  .demo .lbl {
+    font-size: 11px; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; color: #9aa7bd; margin-top: 14px;
+  }
+  .demo.light .lbl { color: #97a0b0; }
+
+  /* Wordmark (logo + texto al lado) */
+  .wordmark { display: inline-flex; align-items: center; gap: 12px; }
+  .wordmark .word {
+    font-family: 'Plus Jakarta Sans'; font-weight: 800; font-size: 22px;
+    color: var(--navy); letter-spacing: -.01em; line-height: 1;
+  }
+  .wordmark .word strong { color: var(--blue-2); }
+  .demo.dark .wordmark .word { color: #fff; }
+  .demo.dark .wordmark .word strong { color: #93b4ff; }
+
+  .pros {
+    margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  }
+  .pros .box {
+    border-radius: 12px; padding: 14px 16px; font-size: 13.5px;
+    border: 1px solid var(--line);
+  }
+  .pros .box b { display: block; font-family: 'Plus Jakarta Sans'; color: var(--navy); margin-bottom: 4px; font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; }
+  .pros .pro { background: #f1f9f4; border-color: #cbe9d4; color: #1d6f3c; }
+  .pros .pro b { color: #0e9268; }
+  .pros .con { background: #fff7eb; border-color: #f6e2bd; color: #875a18; }
+  .pros .con b { color: #b07118; }
+
+  .actions {
+    background: #fff; border-radius: 18px; padding: 28px 36px;
+    box-shadow: 0 6px 24px rgba(11,31,58,.06);
+    margin-top: 14px; text-align: center;
+  }
+  .actions h3 {
+    font-family: 'Plus Jakarta Sans'; font-size: 20px;
+    color: var(--navy); margin-bottom: 8px;
+  }
+  .actions p { color: var(--muted); font-size: 15px; }
+
+  @media (max-width: 880px) {
+    .logo-card { grid-template-columns: 1fr; gap: 18px; }
+    .badge-num { margin: 0 auto; }
+    .showcase { grid-template-columns: 1fr 1fr; }
+    .pros { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="top">
+    <h1>4 propuestas de logo para FormaTuLLC</h1>
+    <p>Cada opción está pensada para transmitir algo distinto. Comparalas al tamaño grande (para web/redes), con el nombre al lado (cómo se ve en el header del sitio), como favicon pequeño (en el navegador) y sobre fondo oscuro. Cuando elijas, te aplico la que prefieras al sitio.</p>
+  </div>
+
+  <!-- ============ OPCIÓN 1: F + ESTRELLA ============ -->
+  <div class="logo-card">
+    <div class="badge-num">1</div>
+    <div>
+      <h2>F con estrella · referencia a EE.UU.</h2>
+      <p class="sub">Sutil guiño a Estados Unidos con una estrella dorada. Profesional, memorable y conecta con el servicio sin caer en cliché de bandera.</p>
+
+      <div class="showcase">
+        <div class="demo light">
+          <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g1a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+            <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g1a)"/>
+            <text x="48" y="74" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="68" fill="white">F</text>
+            <polygon points="80,16 82.5,23.5 90.5,23.5 84,28 86.5,35.5 80,31 73.5,35.5 76,28 69.5,23.5 77.5,23.5" fill="#fbbf24"/>
+          </svg>
+          <span class="lbl">Grande</span>
+        </div>
+        <div class="demo light">
+          <div class="wordmark">
+            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g1b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+              <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g1b)"/>
+              <text x="48" y="74" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="68" fill="white">F</text>
+              <polygon points="80,16 82.5,23.5 90.5,23.5 84,28 86.5,35.5 80,31 73.5,35.5 76,28 69.5,23.5 77.5,23.5" fill="#fbbf24"/>
+            </svg>
+            <span class="word">FormaTu<strong>LLC</strong></span>
+          </div>
+          <span class="lbl">Con texto</span>
+        </div>
+        <div class="demo light">
+          <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g1c" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+            <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g1c)"/>
+            <text x="48" y="74" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="68" fill="white">F</text>
+            <polygon points="80,16 82.5,23.5 90.5,23.5 84,28 86.5,35.5 80,31 73.5,35.5 76,28 69.5,23.5 77.5,23.5" fill="#fbbf24"/>
+          </svg>
+          <span class="lbl">Favicon</span>
+        </div>
+        <div class="demo dark">
+          <div class="wordmark">
+            <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g1d" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient></defs>
+              <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g1d)"/>
+              <text x="48" y="74" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="68" fill="white">F</text>
+              <polygon points="80,16 82.5,23.5 90.5,23.5 84,28 86.5,35.5 80,31 73.5,35.5 76,28 69.5,23.5 77.5,23.5" fill="#fbbf24"/>
+            </svg>
+            <span class="word">FormaTu<strong>LLC</strong></span>
+          </div>
+          <span class="lbl">Sobre oscuro</span>
+        </div>
+      </div>
+
+      <div class="pros">
+        <div class="box pro"><b>A favor</b>Original sin ser cliché. La estrella suma carácter y conecta con EE.UU. Funciona a cualquier tamaño.</div>
+        <div class="box con"><b>A considerar</b>La estrella amarilla destaca mucho. Si quieres algo más sobrio, no es la opción.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ OPCIÓN 2: SELLO / BADGE ============ -->
+  <div class="logo-card">
+    <div class="badge-num">2</div>
+    <div>
+      <h2>Sello oficial · estilo notarial</h2>
+      <p class="sub">Forma circular con doble anillo, evoca sellos oficiales y notariales. Perfecta para transmitir seriedad y formalidad legal.</p>
+
+      <div class="showcase">
+        <div class="demo light">
+          <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a1a35"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient></defs>
+            <circle cx="50" cy="50" r="48" fill="url(#g2a)"/>
+            <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="1" stroke-dasharray="2 3"/>
+            <text x="50" y="64" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="44" fill="white">F</text>
+            <polygon points="50,16 51.8,21.4 57.5,21.4 52.9,24.8 54.7,30.2 50,26.9 45.3,30.2 47.1,24.8 42.5,21.4 48.2,21.4" fill="#fbbf24"/>
+          </svg>
+          <span class="lbl">Grande</span>
+        </div>
+        <div class="demo light">
+          <div class="wordmark">
+            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a1a35"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient></defs>
+              <circle cx="50" cy="50" r="48" fill="url(#g2b)"/>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="1" stroke-dasharray="2 3"/>
+              <text x="50" y="64" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="44" fill="white">F</text>
+              <polygon points="50,16 51.8,21.4 57.5,21.4 52.9,24.8 54.7,30.2 50,26.9 45.3,30.2 47.1,24.8 42.5,21.4 48.2,21.4" fill="#fbbf24"/>
+            </svg>
+            <span class="word">FormaTu<strong>LLC</strong></span>
+          </div>
+          <span class="lbl">Con texto</span>
+        </div>
+        <div class="demo light">
+          <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g2c" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a1a35"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient></defs>
+            <circle cx="50" cy="50" r="48" fill="url(#g2c)"/>
+            <text x="50" y="64" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="44" fill="white">F</text>
+            <polygon points="50,16 51.8,21.4 57.5,21.4 52.9,24.8 54.7,30.2 50,26.9 45.3,30.2 47.1,24.8 42.5,21.4 48.2,21.4" fill="#fbbf24"/>
+          </svg>
+          <span class="lbl">Favicon</span>
+        </div>
+        <div class="demo dark">
+          <div class="wordmark">
+            <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g2d" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#6366f1"/></linearGradient></defs>
+              <circle cx="50" cy="50" r="48" fill="url(#g2d)"/>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="1" stroke-dasharray="2 3"/>
+              <text x="50" y="64" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="44" fill="white">F</text>
+              <polygon points="50,16 51.8,21.4 57.5,21.4 52.9,24.8 54.7,30.2 50,26.9 45.3,30.2 47.1,24.8 42.5,21.4 48.2,21.4" fill="#fbbf24"/>
+            </svg>
+            <span class="word">FormaTu<strong>LLC</strong></span>
+          </div>
+          <span class="lbl">Sobre oscuro</span>
+        </div>
+      </div>
+
+      <div class="pros">
+        <div class="box pro"><b>A favor</b>Máxima percepción de seriedad y oficialidad. Ideal para servicios legales/empresariales. Distintiva.</div>
+        <div class="box con"><b>A considerar</b>El círculo se diferencia del cuadrado clásico de las apps modernas. Algunos pueden percibirlo más "tradicional".</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ OPCIÓN 3: F + CHECK ============ -->
+  <div class="logo-card">
+    <div class="badge-num">3</div>
+    <div>
+      <h2>F con check verde · confianza y trámite cumplido</h2>
+      <p class="sub">La "F" con una insignia de check verde, como un sello de "completado". Comunica que el trámite se hace bien y queda listo. Genera confianza inmediata.</p>
+
+      <div class="showcase">
+        <div class="demo light">
+          <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g3a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+            <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g3a)"/>
+            <text x="38" y="78" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="72" fill="white">F</text>
+            <circle cx="76" cy="74" r="18" fill="#10b981" stroke="white" stroke-width="3"/>
+            <path d="M 68 74 L 73.5 79.5 L 84 68" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="lbl">Grande</span>
+        </div>
+        <div class="demo light">
+          <div class="wordmark">
+            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g3b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+              <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g3b)"/>
+              <text x="38" y="78" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="72" fill="white">F</text>
+              <circle cx="76" cy="74" r="18" fill="#10b981" stroke="white" stroke-width="3"/>
+              <path d="M 68 74 L 73.5 79.5 L 84 68" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="word">FormaTu<strong>LLC</strong></span>
+          </div>
+          <span class="lbl">Con texto</span>
+        </div>
+        <div class="demo light">
+          <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g3c" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+            <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g3c)"/>
+            <text x="38" y="78" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="72" fill="white">F</text>
+            <circle cx="76" cy="74" r="18" fill="#10b981" stroke="white" stroke-width="3"/>
+            <path d="M 68 74 L 73.5 79.5 L 84 68" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="lbl">Favicon</span>
+        </div>
+        <div class="demo dark">
+          <div class="wordmark">
+            <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g3d" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient></defs>
+              <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g3d)"/>
+              <text x="38" y="78" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="72" fill="white">F</text>
+              <circle cx="76" cy="74" r="18" fill="#10b981" stroke="white" stroke-width="3"/>
+              <path d="M 68 74 L 73.5 79.5 L 84 68" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="word">FormaTu<strong>LLC</strong></span>
+          </div>
+          <span class="lbl">Sobre oscuro</span>
+        </div>
+      </div>
+
+      <div class="pros">
+        <div class="box pro"><b>A favor</b>Comunica el valor del servicio (trámite hecho ✓) sin palabras. El verde agrega un color de confianza.</div>
+        <div class="box con"><b>A considerar</b>Es el más "cargado" visualmente. En favicon (32px) el check puede verse pequeño.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ OPCIÓN 4: F MINIMALISTA ============ -->
+  <div class="logo-card">
+    <div class="badge-num">4</div>
+    <div>
+      <h2>F minimalista · estilo startup moderno</h2>
+      <p class="sub">Negro profundo con una barra azul vibrante que sostiene la "F". Inspirado en marcas tech actuales (Linear, Notion, Stripe). Minimalista, premium, atemporal.</p>
+
+      <div class="showcase">
+        <div class="demo light">
+          <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="100" height="100" rx="22" fill="#0a1a35"/>
+            <text x="50" y="68" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="60" fill="white">F</text>
+            <rect x="22" y="80" width="56" height="6" rx="3" fill="#3b82f6"/>
+          </svg>
+          <span class="lbl">Grande</span>
+        </div>
+        <div class="demo light">
+          <div class="wordmark">
+            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="100" height="100" rx="22" fill="#0a1a35"/>
+              <text x="50" y="68" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="60" fill="white">F</text>
+              <rect x="22" y="80" width="56" height="6" rx="3" fill="#3b82f6"/>
+            </svg>
+            <span class="word">FormaTu<strong>LLC</strong></span>
+          </div>
+          <span class="lbl">Con texto</span>
+        </div>
+        <div class="demo light">
+          <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="100" height="100" rx="22" fill="#0a1a35"/>
+            <text x="50" y="68" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="60" fill="white">F</text>
+            <rect x="22" y="80" width="56" height="6" rx="3" fill="#3b82f6"/>
+          </svg>
+          <span class="lbl">Favicon</span>
+        </div>
+        <div class="demo dark">
+          <div class="wordmark">
+            <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="100" height="100" rx="22" fill="#ffffff"/>
+              <text x="50" y="68" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="60" fill="#0a1a35">F</text>
+              <rect x="22" y="80" width="56" height="6" rx="3" fill="#3b82f6"/>
+            </svg>
+            <span class="word">FormaTu<strong>LLC</strong></span>
+          </div>
+          <span class="lbl">Sobre oscuro</span>
+        </div>
+      </div>
+
+      <div class="pros">
+        <div class="box pro"><b>A favor</b>Estilo más actual y atemporal. Premium sin esfuerzo. Perfecto para escalar a una marca grande.</div>
+        <div class="box con"><b>A considerar</b>Menos "cálido" que las otras. Comunica tecnología más que cercanía latinoamericana.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ACTUAL (PARA COMPARAR) ============ -->
+  <div class="logo-card" style="opacity: .85;">
+    <div class="badge-num" style="background: #6b7280; box-shadow: none;">·</div>
+    <div>
+      <h2>El que tienes ahora (para comparar)</h2>
+      <p class="sub">La "F" simple en cuadrado degradado. Limpia y funcional, pero genérica — podría ser cualquier marca con F.</p>
+
+      <div class="showcase">
+        <div class="demo light">
+          <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g0a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+            <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g0a)"/>
+            <text x="50" y="72" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="64" fill="white">F</text>
+          </svg>
+          <span class="lbl">Grande</span>
+        </div>
+        <div class="demo light">
+          <div class="wordmark">
+            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g0b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+              <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g0b)"/>
+              <text x="50" y="72" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="64" fill="white">F</text>
+            </svg>
+            <span class="word">FormaTu<strong>LLC</strong></span>
+          </div>
+          <span class="lbl">Con texto</span>
+        </div>
+        <div class="demo light">
+          <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g0c" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+            <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g0c)"/>
+            <text x="50" y="72" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="64" fill="white">F</text>
+          </svg>
+          <span class="lbl">Favicon</span>
+        </div>
+        <div class="demo dark">
+          <div class="wordmark">
+            <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g0d" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient></defs>
+              <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#g0d)"/>
+              <text x="50" y="72" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="64" fill="white">F</text>
+            </svg>
+            <span class="word">FormaTu<strong>LLC</strong></span>
+          </div>
+          <span class="lbl">Sobre oscuro</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <h3>¿Cuál te gusta más?</h3>
+    <p>Avísame el número (1, 2, 3 o 4) y lo aplico al sitio. Si ninguna te convence, podemos mezclar elementos o probar otra dirección.</p>
+  </div>
+
+</div>
+</body>
+</html>
